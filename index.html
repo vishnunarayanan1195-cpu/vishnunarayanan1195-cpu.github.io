@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ethno Organics — Kerala's Certified Organic Forest Products | Global Export</title>
+<meta name="description" content="Ethno Organics is a Kerala-based export partnership supplying legally sourced organic forest products, spices, sandalwood oil, and wild botanicals with scientific quality assurance and documentation.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --forest: #1a3a2a;
+    --forest-mid: #2d5a3d;
+    --forest-light: #3d7a52;
+    --gold: #c8973a;
+    --gold-light: #e8b85a;
+    --cream: #f8f3e8;
+    --parchment: #f0e8d0;
+    --bark: #7a5c3a;
+    --sand: #e8dcc8;
+    --white: #fefcf8;
+    --text-dark: #1a1a14;
+    --text-mid: #3a3a2c;
+    --text-muted: #6a6a5a;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Jost', sans-serif; background: var(--white); color: var(--text-dark); overflow-x: hidden; }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(26,58,42,0.97);
+    backdrop-filter: blur(8px);
+    padding: 0 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 70px;
+    border-bottom: 1px solid rgba(200,151,58,0.3);
+  }
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.55rem; font-weight: 700;
+    color: var(--gold-light); letter-spacing: 0.02em; line-height: 1.1;
+    cursor: pointer;
+  }
+  .nav-logo span {
+    color: rgba(255,255,255,0.6); font-weight: 400; font-size: 0.68rem;
+    display: block; letter-spacing: 0.22em; text-transform: uppercase;
+    font-family: 'Jost', sans-serif; margin-top: 2px;
+  }
+  .nav-links { display: flex; gap: 2.2rem; list-style: none; }
+  .nav-links a {
+    color: rgba(255,255,255,0.72); text-decoration: none;
+    font-size: 0.8rem; font-weight: 500; letter-spacing: 0.12em;
+    text-transform: uppercase; transition: color 0.3s;
+  }
+  .nav-links a:hover { color: var(--gold-light); }
+  .nav-cta {
+    background: var(--gold) !important; color: var(--forest) !important;
+    padding: 0.5rem 1.4rem; border-radius: 2px; font-weight: 600 !important;
+    transition: background 0.3s !important;
+  }
+  .nav-cta:hover { background: var(--gold-light) !important; }
+
+  /* HAMBURGER */
+  .nav-hamburger {
+    display: none; flex-direction: column; gap: 5px;
+    cursor: pointer; padding: 4px;
+  }
+  .nav-hamburger span {
+    display: block; width: 24px; height: 2px;
+    background: rgba(255,255,255,0.8); border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: linear-gradient(155deg, #091a10 0%, #1a3a2a 45%, #2d5a3d 100%);
+    display: flex; align-items: center;
+    padding: 0 8%;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: ''; position: absolute; inset: 0;
+    background-image:
+      radial-gradient(ellipse at 72% 45%, rgba(200,151,58,0.09) 0%, transparent 60%),
+      radial-gradient(ellipse at 15% 85%, rgba(61,122,82,0.18) 0%, transparent 50%);
+  }
+  .hero-pattern {
+    position: absolute; right: -5%; top: 0; bottom: 0; width: 58%;
+    opacity: 0.06;
+    background-image:
+      repeating-linear-gradient(60deg, transparent, transparent 30px, rgba(200,151,58,0.6) 30px, rgba(200,151,58,0.6) 31px),
+      repeating-linear-gradient(-60deg, transparent, transparent 30px, rgba(200,151,58,0.6) 30px, rgba(200,151,58,0.6) 31px);
+  }
+  .launch-ribbon {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    background: rgba(200,151,58,0.18); border: 1px solid rgba(200,151,58,0.5);
+    color: var(--gold-light); font-size: 0.7rem; font-weight: 700;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    padding: 0.45rem 1.3rem; border-radius: 100px; margin-bottom: 1.8rem;
+    animation: fadeUp 0.8s ease both;
+  }
+  .launch-ribbon::before {
+    content: ''; width: 7px; height: 7px;
+    background: var(--gold); border-radius: 50%; display: inline-block;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.7); }
+  }
+  .hero-content { position: relative; z-index: 2; max-width: 700px; }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.6rem, 4.8vw, 4.5rem); font-weight: 700;
+    color: #fff; line-height: 1.1; margin-bottom: 1.5rem;
+    animation: fadeUp 0.9s 0.1s ease both;
+  }
+  .hero h1 em { font-style: italic; color: var(--gold-light); }
+  .hero-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.22rem; font-weight: 300;
+    color: rgba(255,255,255,0.75); line-height: 1.75; margin-bottom: 2.5rem;
+    animation: fadeUp 1s 0.2s ease both;
+  }
+  .hero-actions {
+    display: flex; gap: 1rem; flex-wrap: wrap;
+    animation: fadeUp 1s 0.3s ease both;
+  }
+  .btn-primary {
+    background: var(--gold); color: var(--forest);
+    padding: 0.9rem 2.2rem; border: none; border-radius: 2px;
+    font-family: 'Jost', sans-serif; font-size: 0.83rem; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    text-decoration: none; cursor: pointer; transition: all 0.3s; display: inline-block;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .btn-outline {
+    background: transparent; color: rgba(255,255,255,0.85);
+    padding: 0.9rem 2.2rem; border: 1px solid rgba(255,255,255,0.35); border-radius: 2px;
+    font-family: 'Jost', sans-serif; font-size: 0.83rem; font-weight: 500;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    text-decoration: none; cursor: pointer; transition: all 0.3s; display: inline-block;
+  }
+  .btn-outline:hover { border-color: var(--gold-light); color: var(--gold-light); }
+  .hero-pillars {
+    position: absolute; bottom: 55px; right: 8%;
+    display: flex; gap: 0; animation: fadeUp 1s 0.4s ease both; z-index: 2;
+    border: 1px solid rgba(200,151,58,0.25); border-radius: 4px; overflow: hidden;
+  }
+  .hero-pillar {
+    padding: 1rem 1.8rem; text-align: center;
+    border-right: 1px solid rgba(200,151,58,0.2);
+    background: rgba(0,0,0,0.25);
+  }
+  .hero-pillar:last-child { border-right: none; }
+  .hero-pillar .ico { font-size: 1.2rem; display: block; margin-bottom: 0.3rem; }
+  .hero-pillar .lbl {
+    font-size: 0.67rem; font-weight: 600; letter-spacing: 0.14em;
+    text-transform: uppercase; color: rgba(255,255,255,0.55); display: block;
+  }
+  .hero-pillar .val {
+    font-size: 0.82rem; font-weight: 600; color: var(--gold-light);
+    display: block; margin-top: 0.1rem;
+  }
+
+  /* ── TRUST BAR ── */
+  .trust-bar {
+    background: var(--parchment); padding: 1.6rem 8%;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 1.2rem;
+    border-bottom: 1px solid var(--sand);
+  }
+  .trust-item { display: flex; align-items: center; gap: 0.8rem; }
+  .trust-icon {
+    width: 38px; height: 38px; background: var(--forest); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .trust-icon svg { width: 17px; height: 17px; fill: var(--gold-light); }
+  .trust-text strong { display: block; font-size: 0.8rem; font-weight: 600; color: var(--forest); letter-spacing: 0.04em; }
+  .trust-text span { font-size: 0.73rem; color: var(--text-muted); }
+
+  /* ── SECTIONS ── */
+  section { padding: 5.5rem 8%; }
+  .section-label {
+    font-size: 0.7rem; font-weight: 700; letter-spacing: 0.25em;
+    text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 0.8rem;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.9rem, 3.2vw, 2.8rem); font-weight: 700;
+    color: var(--forest); line-height: 1.2; margin-bottom: 1.1rem;
+  }
+  .section-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.12rem; font-weight: 400;
+    color: var(--text-mid); line-height: 1.75; max-width: 620px;
+  }
+
+  /* ── ABOUT ── */
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 5rem; align-items: center; margin-top: 3rem;
+  }
+  .about-main-card {
+    background: var(--forest); border-radius: 4px;
+    padding: 3rem; color: white; position: relative; overflow: hidden;
+  }
+  .about-main-card::before {
+    content: ''; position: absolute; top: -40px; right: -40px;
+    width: 180px; height: 180px;
+    border: 1px solid rgba(200,151,58,0.25); border-radius: 50%;
+  }
+  .about-main-card::after {
+    content: ''; position: absolute; top: -10px; right: -10px;
+    width: 100px; height: 100px;
+    border: 1px solid rgba(200,151,58,0.15); border-radius: 50%;
+  }
+  .about-main-card .quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.45rem; font-style: italic;
+    color: var(--gold-light); line-height: 1.55; margin-bottom: 1.5rem;
+  }
+  .about-main-card p { font-size: 0.88rem; color: rgba(255,255,255,0.72); line-height: 1.72; }
+  .about-badge-row { display: flex; gap: 0.8rem; margin-top: 1.5rem; flex-wrap: wrap; }
+  .cert-badge {
+    background: rgba(200,151,58,0.15); border: 1px solid rgba(200,151,58,0.4);
+    color: var(--gold-light); font-size: 0.68rem; font-weight: 700;
+    letter-spacing: 0.12em; padding: 0.35rem 0.9rem; border-radius: 2px; text-transform: uppercase;
+  }
+  .about-floating {
+    position: absolute; bottom: -2rem; right: -2rem;
+    background: var(--gold); color: var(--forest);
+    padding: 1.5rem; border-radius: 4px; text-align: center; min-width: 130px;
+  }
+  .about-floating .big {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem; font-weight: 700; display: block; line-height: 1.1;
+  }
+  .about-floating small {
+    font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em;
+    text-transform: uppercase; display: block; margin-top: 0.3rem;
+  }
+  .about-points { display: flex; flex-direction: column; gap: 1.5rem; }
+  .about-point { display: flex; gap: 1.2rem; align-items: flex-start; }
+  .point-num {
+    font-family: 'Playfair Display', serif; font-size: 1.9rem; font-weight: 700;
+    color: var(--sand); line-height: 1; flex-shrink: 0; min-width: 46px;
+  }
+  .point-text strong { display: block; font-size: 0.98rem; font-weight: 600; color: var(--forest); margin-bottom: 0.3rem; }
+  .point-text p { font-size: 0.86rem; color: var(--text-muted); line-height: 1.65; }
+
+  /* ── ABOUT US FULL SECTION ── */
+  .about-full { background: var(--parchment); }
+  .about-full-inner { max-width: 1200px; margin: 0 auto; }
+  .about-full h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.7rem, 2.6vw, 2.3rem); font-weight: 700;
+    color: var(--forest); margin-bottom: 1.2rem; line-height: 1.2;
+  }
+  .about-full p {
+    font-size: 0.93rem; color: var(--text-mid); line-height: 1.8; margin-bottom: 1.1rem;
+  }
+  .about-two-col {
+    display: grid; grid-template-columns: 1.4fr 1fr; gap: 4rem; align-items: start;
+    margin-top: 3.5rem;
+  }
+  .strength-card {
+    background: var(--forest); border-radius: 6px; padding: 2.2rem; color: white;
+  }
+  .strength-card h3 {
+    font-family: 'Playfair Display', serif; font-size: 1.2rem;
+    color: var(--gold-light); margin-bottom: 1.2rem;
+  }
+  .strength-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+  .strength-card ul li {
+    font-size: 0.87rem; color: rgba(255,255,255,0.72);
+    padding-left: 1.4rem; position: relative; line-height: 1.5;
+  }
+  .strength-card ul li::before {
+    content: '✦'; position: absolute; left: 0;
+    color: var(--gold); font-size: 0.6rem; top: 0.3rem;
+  }
+  .about-sourcing-philosophy { margin-top: 3.5rem; }
+  .about-sourcing-philosophy h2 { margin-top: 0; }
+
+  /* ── LAUNCH STATEMENT ── */
+  .launch-statement {
+    background: linear-gradient(135deg, #0d2218, #1a3a2a);
+    padding: 4rem 8%; text-align: center; position: relative; overflow: hidden;
+  }
+  .launch-statement::before {
+    content: ''; position: absolute; inset: 0;
+    background-image: repeating-linear-gradient(
+      45deg, transparent, transparent 40px,
+      rgba(200,151,58,0.03) 40px, rgba(200,151,58,0.03) 41px
+    );
+  }
+  .launch-inner { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; }
+  .launch-inner h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3vw, 2.6rem); color: white;
+    font-weight: 700; margin-bottom: 1.2rem; line-height: 1.25;
+  }
+  .launch-inner h2 em { color: var(--gold-light); font-style: italic; }
+  .launch-inner p {
+    font-family: 'Cormorant Garamond', serif; font-size: 1.15rem;
+    color: rgba(255,255,255,0.7); line-height: 1.8; margin-bottom: 2rem;
+  }
+  .launch-credentials { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  .cred-chip {
+    background: rgba(200,151,58,0.12); border: 1px solid rgba(200,151,58,0.35);
+    color: var(--gold-light); font-size: 0.72rem; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    padding: 0.5rem 1.2rem; border-radius: 100px;
+  }
+
+  /* ── PRODUCTS ── */
+  .products { background: var(--parchment); }
+  .products-header {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    margin-bottom: 3rem; flex-wrap: wrap; gap: 2rem;
+  }
+  .products-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
+  .product-card {
+    background: var(--white); border-radius: 4px; overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s; border: 1px solid var(--sand);
+  }
+  .product-card:hover { transform: translateY(-5px); box-shadow: 0 18px 45px rgba(26,58,42,0.1); }
+  .product-card.featured { grid-column: span 2; display: grid; grid-template-columns: 1fr 1fr; }
+  .product-visual {
+    height: 195px; display: flex; align-items: center;
+    justify-content: center; position: relative; overflow: hidden;
+  }
+  .product-card.featured .product-visual { height: 100%; min-height: 240px; }
+  .pv-sandalwood { background: linear-gradient(135deg, #1a2a1a, #3d5a2d); }
+  .pv-pepper { background: linear-gradient(135deg, #1a0a1a, #4a1a3a); }
+  .pv-cardamom { background: linear-gradient(135deg, #0a2018, #1a5a3a); }
+  .pv-cinnamon { background: linear-gradient(135deg, #2a1506, #6a3212); }
+  .pv-wild { background: linear-gradient(135deg, #1a1a0a, #4a4a1a); }
+  .pv-spice { background: linear-gradient(135deg, #2d1a0a, #5a3018); }
+  .product-visual-icon { font-size: 3.5rem; z-index: 2; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5)); }
+  .product-visual-decor {
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(255,255,255,0.02) 20px, rgba(255,255,255,0.02) 21px);
+  }
+  .product-body { padding: 1.5rem; }
+  .product-tag { font-size: 0.63rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 0.4rem; }
+  .product-name { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700; color: var(--forest); margin-bottom: 0.55rem; line-height: 1.2; }
+  .product-desc { font-size: 0.83rem; color: var(--text-muted); line-height: 1.62; margin-bottom: 1rem; }
+  .product-specs { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .spec-pill {
+    background: var(--parchment); color: var(--bark);
+    font-size: 0.67rem; font-weight: 600; letter-spacing: 0.07em;
+    padding: 0.28rem 0.65rem; border-radius: 100px; border: 1px solid var(--sand);
+  }
+
+  /* ── SOURCING ── */
+  .sourcing-grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: 5rem; align-items: center; margin-top: 3rem; }
+  .sourcing-step { display: flex; gap: 1.4rem; padding: 1.6rem 0; border-bottom: 1px solid var(--sand); }
+  .sourcing-step:last-child { border-bottom: none; }
+  .step-circle {
+    width: 46px; height: 46px; background: var(--forest); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    color: var(--gold-light); font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700;
+  }
+  .step-body strong { display: block; font-size: 0.97rem; font-weight: 600; color: var(--forest); margin-bottom: 0.3rem; }
+  .step-body p { font-size: 0.84rem; color: var(--text-muted); line-height: 1.62; }
+  .sourcing-panel { background: var(--forest); border-radius: 6px; padding: 2.8rem; color: white; }
+  .source-title { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--gold-light); margin-bottom: 0.4rem; font-weight: 700; }
+  .source-desc { font-size: 0.84rem; color: rgba(255,255,255,0.62); line-height: 1.65; margin-bottom: 1.8rem; }
+  .source-cards { display: flex; flex-direction: column; gap: 0.9rem; }
+  .source-card {
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(200,151,58,0.18);
+    border-radius: 4px; padding: 1.1rem 1.3rem; display: flex; gap: 1rem; align-items: flex-start;
+  }
+  .source-card-icon {
+    width: 34px; height: 34px; background: rgba(200,151,58,0.18); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.95rem;
+  }
+  .source-card-text strong { display: block; font-size: 0.88rem; font-weight: 600; color: rgba(255,255,255,0.9); margin-bottom: 0.2rem; }
+  .source-card-text span { font-size: 0.77rem; color: rgba(255,255,255,0.5); line-height: 1.5; }
+
+  /* ── CERTIFICATION ── */
+  .cert-section { background: var(--forest); }
+  .cert-section .section-title { color: var(--gold-light); }
+  .cert-section .section-label { color: rgba(200,151,58,0.65); }
+  .cert-section .section-sub { color: rgba(255,255,255,0.62); }
+  .cert-header { text-align: center; margin-bottom: 3.5rem; }
+  .cert-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.3rem; margin-bottom: 3.5rem; }
+  .cert-card {
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(200,151,58,0.22);
+    border-radius: 6px; padding: 1.8rem 1.3rem; text-align: center; transition: all 0.3s;
+  }
+  .cert-card:hover { background: rgba(200,151,58,0.09); border-color: rgba(200,151,58,0.45); transform: translateY(-3px); }
+  .cert-card-icon {
+    width: 58px; height: 58px; background: rgba(200,151,58,0.13);
+    border: 1px solid rgba(200,151,58,0.28); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 1.1rem; font-size: 1.7rem;
+  }
+  .cert-card strong { display: block; font-size: 0.87rem; font-weight: 600; color: rgba(255,255,255,0.88); margin-bottom: 0.45rem; letter-spacing: 0.02em; }
+  .cert-card p { font-size: 0.77rem; color: rgba(255,255,255,0.48); line-height: 1.55; }
+  .lab-banner {
+    background: rgba(200,151,58,0.1); border: 1px solid rgba(200,151,58,0.28);
+    border-radius: 6px; padding: 2.2rem 2.8rem;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 2rem; flex-wrap: wrap;
+  }
+  .lab-banner-text strong { font-family: 'Playfair Display', serif; font-size: 1.35rem; color: var(--gold-light); display: block; margin-bottom: 0.4rem; }
+  .lab-banner-text p { font-size: 0.84rem; color: rgba(255,255,255,0.58); line-height: 1.65; max-width: 520px; }
+
+  /* ── WHY US ── */
+  .why-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.8rem; margin-top: 3.5rem; }
+  .why-card {
+    padding: 2.3rem; border: 1px solid var(--sand); border-radius: 4px;
+    position: relative; transition: all 0.3s; background: var(--white);
+  }
+  .why-card:hover { border-color: var(--gold); transform: translateY(-4px); box-shadow: 0 12px 36px rgba(200,151,58,0.09); }
+  .why-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0;
+    height: 3px; background: linear-gradient(90deg, var(--forest), var(--gold));
+    border-radius: 4px 4px 0 0; opacity: 0; transition: opacity 0.3s;
+  }
+  .why-card:hover::before { opacity: 1; }
+  .why-card-icon { font-size: 1.9rem; margin-bottom: 1.1rem; display: block; }
+  .why-card strong { font-size: 1rem; font-weight: 600; color: var(--forest); display: block; margin-bottom: 0.55rem; font-family: 'Playfair Display', serif; }
+  .why-card p { font-size: 0.84rem; color: var(--text-muted); line-height: 1.65; }
+
+  /* ── BUYERS ── */
+  .buyer-section { background: var(--cream); }
+  .buyer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-top: 3rem; }
+  .buyer-benefits { display: flex; flex-direction: column; gap: 1.1rem; }
+  .buyer-benefit {
+    display: flex; gap: 1rem; align-items: flex-start;
+    padding: 1.2rem 1.4rem; background: var(--white);
+    border-radius: 4px; border-left: 3px solid var(--gold);
+  }
+  .buyer-benefit-icon { font-size: 1.2rem; flex-shrink: 0; }
+  .buyer-benefit strong { display: block; font-size: 0.9rem; font-weight: 600; color: var(--forest); margin-bottom: 0.2rem; }
+  .buyer-benefit p { font-size: 0.81rem; color: var(--text-muted); line-height: 1.55; }
+
+  /* ── GLOBAL ── */
+  .global-section { background: var(--forest); padding: 5rem 8%; }
+  .global-section .section-title { color: var(--gold-light); }
+  .global-section .section-label { color: rgba(200,151,58,0.65); }
+  .regions-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.2rem; margin-top: 3rem; }
+  .region-card {
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(200,151,58,0.2);
+    border-radius: 5px; padding: 1.6rem 1.3rem; text-align: center; transition: all 0.3s;
+  }
+  .region-card:hover { background: rgba(200,151,58,0.1); border-color: rgba(200,151,58,0.4); }
+  .region-card .region-icon { font-size: 1.6rem; margin-bottom: 0.7rem; display: block; }
+  .region-card strong { display: block; font-size: 0.88rem; font-weight: 600; color: rgba(255,255,255,0.88); margin-bottom: 0.4rem; }
+  .region-card p { font-size: 0.75rem; color: rgba(255,255,255,0.48); line-height: 1.5; }
+
+  /* ── CONTACT ── */
+  .contact-section { background: var(--forest); padding: 5rem 8%; }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 5rem; align-items: start; }
+  .contact-info .section-title { color: var(--gold-light); }
+  .contact-info .section-sub { color: rgba(255,255,255,0.62); font-size: 0.95rem; }
+  .contact-detail {
+    display: flex; gap: 1rem; align-items: flex-start;
+    margin-top: 2rem; padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .contact-detail-icon {
+    width: 40px; height: 40px; background: rgba(200,151,58,0.18); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0;
+  }
+  .contact-detail strong { display: block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 0.3rem; }
+  .contact-detail p { font-size: 0.87rem; color: rgba(255,255,255,0.65); line-height: 1.6; }
+  .contact-detail a { color: rgba(255,255,255,0.65); text-decoration: none; }
+  .contact-detail a:hover { color: var(--gold-light); }
+  .contact-form {
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(200,151,58,0.2);
+    border-radius: 6px; padding: 2.4rem;
+  }
+  .form-title { font-family: 'Playfair Display', serif; font-size: 1.35rem; color: rgba(255,255,255,0.9); margin-bottom: 0.35rem; }
+  .form-sub { font-size: 0.81rem; color: rgba(255,255,255,0.45); margin-bottom: 1.8rem; line-height: 1.55; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 0; }
+  .form-group { display: flex; flex-direction: column; gap: 0.45rem; margin-bottom: 1rem; }
+  .form-group label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+  .form-group input, .form-group select, .form-group textarea {
+    background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 3px; padding: 0.72rem 1rem;
+    font-family: 'Jost', sans-serif; font-size: 0.87rem;
+    color: rgba(255,255,255,0.85); outline: none; transition: border-color 0.3s;
+  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--gold); }
+  .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.28); }
+  .form-group select option { background: #1a3a2a; color: white; }
+  .form-group textarea { resize: vertical; min-height: 95px; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #091810; padding: 2.8rem 8%;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 2rem;
+    border-top: 1px solid rgba(200,151,58,0.12);
+  }
+  .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; color: var(--gold-light); }
+  .footer-logo span { display: block; font-family: 'Jost', sans-serif; font-size: 0.66rem; font-weight: 400; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.38); margin-top: 3px; }
+  .footer-mid { font-size: 0.77rem; color: rgba(255,255,255,0.38); text-align: center; line-height: 1.75; }
+  .footer-mid strong { color: rgba(255,255,255,0.6); display: block; margin-bottom: 0.3rem; }
+  .footer-certs { display: flex; gap: 0.7rem; flex-wrap: wrap; justify-content: flex-end; }
+  .footer-cert-pill {
+    font-size: 0.63rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--gold-light); border: 1px solid rgba(200,151,58,0.28);
+    padding: 0.28rem 0.75rem; border-radius: 100px;
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(22px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .fade-in { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1024px) {
+    .cert-grid { grid-template-columns: repeat(2,1fr); }
+    .about-two-col { grid-template-columns: 1fr; gap: 2.5rem; }
+  }
+  @media (max-width: 900px) {
+    .about-grid, .sourcing-grid, .buyer-grid, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .products-grid { grid-template-columns: repeat(2,1fr); }
+    .product-card.featured { grid-column: span 1; grid-template-columns: 1fr; }
+    .why-grid, .regions-grid { grid-template-columns: repeat(2,1fr); }
+    .hero-pillars { display: none; }
+    .about-floating { display: none; }
+  }
+  @media (max-width: 600px) {
+    section { padding: 4rem 5%; }
+    .nav-links { display: none; }
+    .nav-hamburger { display: flex; }
+    .nav-links.open {
+      display: flex; flex-direction: column; gap: 0;
+      position: fixed; top: 70px; left: 0; right: 0;
+      background: rgba(26,58,42,0.99);
+      padding: 1rem 5%; border-bottom: 1px solid rgba(200,151,58,0.2);
+    }
+    .nav-links.open li a { padding: 0.9rem 0; display: block; border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 0.88rem; }
+    .products-grid, .why-grid, .regions-grid, .cert-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .trust-bar { justify-content: flex-start; }
+    footer { flex-direction: column; align-items: flex-start; }
+    .footer-certs { justify-content: flex-start; }
+    .about-two-col { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 2.3rem; }
+    .hero-sub { font-size: 1rem; }
+    .launch-statement { padding: 3rem 5%; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════════ NAV ══════════════ -->
+<nav>
+  <div class="nav-logo" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    Ethno Organics
+    <span>Kerala · India · Organic Forest Exports</span>
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#sourcing">Sourcing</a></li>
+    <li><a href="#certification">Certification</a></li>
+    <li><a href="#global">Global Reach</a></li>
+    <li><a href="#contact" class="nav-cta">Enquire Now</a></li>
+  </ul>
+  <div class="nav-hamburger" id="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ══════════════ HERO ══════════════ -->
+<section class="hero" id="home">
+  <div class="hero-pattern"></div>
+  <div class="hero-content">
+    <div class="launch-ribbon">Now Accepting Global Buyer Enquiries · 2025 Launch</div>
+    <h1>Pure. Legal. Certified.<br><em>Kerala's Organic</em><br>Forest Products — Worldwide</h1>
+    <p class="hero-sub">Ethno Organics is a new export partnership led by forestry scientists and qualified forest produce specialists. We bring authentically sourced organic spices, pure sandalwood oil, and wild forest products from Kerala's certified supply chain to verified buyers across the globe — with full documentation, laboratory testing, and consistent supply commitment.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Enquire Now</a>
+      <a href="#about" class="btn-outline">About Us</a>
+      <a href="#products" class="btn-outline">Explore Our Products</a>
+    </div>
+  </div>
+  <div class="hero-pillars">
+    <div class="hero-pillar">
+      <span class="ico">🔬</span>
+      <span class="lbl">Our Foundation</span>
+      <span class="val">Science-Based</span>
+    </div>
+    <div class="hero-pillar">
+      <span class="ico">🏛️</span>
+      <span class="lbl">Primary Source</span>
+      <span class="val">KFDC Authorised</span>
+    </div>
+    <div class="hero-pillar">
+      <span class="ico">🧪</span>
+      <span class="lbl">Every Shipment</span>
+      <span class="val">Lab Tested</span>
+    </div>
+    <div class="hero-pillar">
+      <span class="ico">🌍</span>
+      <span class="lbl">Supply Reach</span>
+      <span class="val">Global Export</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ TRUST BAR ══════════════ -->
+<div class="trust-bar">
+  <div class="trust-item">
+    <div class="trust-icon">
+      <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5L12 1zm0 4l6 2.67V11c0 3.88-2.6 7.45-6 8.65C8.6 18.45 6 14.88 6 11V7.67L12 5z"></path></svg>
+    </div>
+    <div class="trust-text">
+      <strong>KFDC Authorised Source</strong>
+      <span>Kerala Forest Development Corporation</span>
+    </div>
+  </div>
+  <div class="trust-item">
+    <div class="trust-icon">
+      <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path></svg>
+    </div>
+    <div class="trust-text">
+      <strong>Recognised Lab Tested</strong>
+      <span>IWST Bangalore &amp; accredited labs</span>
+    </div>
+  </div>
+  <div class="trust-item">
+    <div class="trust-icon">
+      <svg viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"></path></svg>
+    </div>
+    <div class="trust-text">
+      <strong>Forestry Science Background</strong>
+      <span>Qualified forest produce specialists</span>
+    </div>
+  </div>
+  <div class="trust-item">
+    <div class="trust-icon">
+      <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
+    </div>
+    <div class="trust-text">
+      <strong>Kerala Origin</strong>
+      <span>Western Ghats Biodiversity Zone</span>
+    </div>
+  </div>
+  <div class="trust-item">
+    <div class="trust-icon">
+      <svg viewBox="0 0 24 24"><path d="M20 6h-2.18c.07-.44.18-.88.18-1.33C18 2.1 15.9 0 13.33 0c-1.3 0-2.4.52-3.23 1.36L9 2.5l-1.1-1.14C7.07.52 5.97 0 4.67 0 2.1 0 0 2.1 0 4.67c0 .45.11.89.18 1.33H0v2h20V6zM2 20c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8H2v12z"></path></svg>
+    </div>
+    <div class="trust-text">
+      <strong>Legal Documentation</strong>
+      <span>Full export &amp; forest produce compliance</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ ABOUT (WHO WE ARE) ══════════════ -->
+<section id="about">
+  <div class="about-grid fade-in visible">
+    <div style="position: relative;">
+      <div class="about-main-card">
+        <p class="quote">"We may be new to the market — but we are not new to the forest. Our knowledge is deep-rooted, our sources are authenticated, and our commitment to quality is absolute."</p>
+        <p>Ethno Organics is a freshly launched export partnership based in Kochi, Kerala. While we are new as a business, our founding team brings formal forestry science qualifications, hands-on knowledge of Kerala's forest produce ecosystem, and a rigorous compliance-first approach to every aspect of the supply chain. We are building this company on transparency, science, and trust — not on unverifiable claims.</p>
+        <div class="about-badge-row">
+          <span class="cert-badge">New Launch · 2025</span>
+          <span class="cert-badge">Science-Led</span>
+          <span class="cert-badge">100% Legal</span>
+        </div>
+      </div>
+      <div class="about-floating">
+        <span class="big">KFDC</span>
+        <small>Authorised<br>Channel</small>
+      </div>
+    </div>
+    <div class="about-points">
+      <span class="section-label">Who We Are</span>
+      <h2 class="section-title">Qualified Professionals.<br>A New Company.<br>An Uncompromising Standard.</h2>
+      <p class="section-sub" style="margin-bottom: 2rem;">We believe buyers deserve complete honesty. We are launching fresh — but our expertise in forestry, species science, and Kerala's forest produce regulations is our strongest credential.</p>
+      <div class="about-point">
+        <span class="point-num">01</span>
+        <div class="point-text">
+          <strong>Forestry Scientific Qualifications</strong>
+          <p>Our partners hold recognised forestry science degrees and field expertise in Kerala's forest produce ecosystem — including species identification, sustainable harvesting norms, NTFP licensing, and quality assessment at source.</p>
+        </div>
+      </div>
+      <div class="about-point">
+        <span class="point-num">02</span>
+        <div class="point-text">
+          <strong>Government-Authenticated Legal Sourcing</strong>
+          <p>We source exclusively through legally authorised channels — primarily the Kerala Forest Development Corporation (KFDC) and licensed forest produce merchants — ensuring every product is traceable, legal, and genuinely organic.</p>
+        </div>
+      </div>
+      <div class="about-point">
+        <span class="point-num">03</span>
+        <div class="point-text">
+          <strong>Science-Backed Quality Assurance</strong>
+          <p>Our forestry science background means we evaluate quality the way researchers do — through verifiable parameters, laboratory data, and species-specific standards — not just visual or organoleptic checks alone.</p>
+        </div>
+      </div>
+      <div class="about-point">
+        <span class="point-num">04</span>
+        <div class="point-text">
+          <strong>Built for the Long Term</strong>
+          <p>We are not traders. We are building Ethno Organics as a long-term, reputation-first export business. Every commitment we make to a buyer is one we are fully prepared to honour — consistently.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ ABOUT US FULL ══════════════ -->
+<section class="about-full" id="about-full">
+  <div class="about-full-inner fade-in visible">
+    <span class="section-label">About Ethno Organics — In Detail</span>
+    <h2>Kerala's Forest Products, Sourced with Science, Legality, and Trust</h2>
+    <p>Ethno Organics was established with a clear purpose: to connect international buyers with authentic, legally sourced, and properly documented forest products and organic spices from Kerala.</p>
+    <p>We focus on products such as Indian sandalwood oil, Kerala black pepper, green cardamom, cinnamon, nutmeg, mace, clove, forest honey, wild botanicals, Ayurvedic herbs, resins, and other non-timber forest products. Our approach is built on transparency, scientific evaluation, and legal procurement.</p>
+    <p>As a newly launched business, we believe our greatest strength is not exaggerated claims, but our commitment to traceability, documentation, buyer confidence, and long-term supply relationships.</p>
+
+    <div class="about-two-col">
+      <div>
+        <span class="section-label">Our Professional Foundation</span>
+        <h2>Professional Expertise Behind Every Shipment</h2>
+        <p>Our team brings knowledge of forestry science, species identification, sustainable harvesting practices, non-timber forest produce regulations, quality assessment, and export compliance.</p>
+        <p>This background helps us evaluate products beyond appearance alone. We focus on source authenticity, botanical identity, moisture levels, purity parameters, contamination risks, laboratory testing, and documentation readiness.</p>
+      </div>
+      <div class="strength-card">
+        <h3>Our Core Strengths</h3>
+        <ul>
+          <li>Forestry science-based product understanding</li>
+          <li>Legal and traceable sourcing channels</li>
+          <li>Independent laboratory testing via IWST Bangalore and accredited labs</li>
+          <li>Export-standard documentation for all markets</li>
+          <li>Buyer-focused communication and transparency</li>
+          <li>Long-term supply commitment and consistency</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="about-sourcing-philosophy">
+      <span class="section-label">Our Philosophy</span>
+      <h2>Sourcing With Integrity</h2>
+      <p>Ethno Organics sources products only through authorised and legally acceptable channels. For regulated forest products, we work with authorised government and licensed supply systems. For spices and organic products, we work with certified farmers, approved merchants, and reliable producer networks.</p>
+      <p>Our aim is to protect both the buyer and the ecosystem. We do not support illegal forest extraction, undocumented trading, or misleading product claims. Every genuine buyer deserves clarity on where the product comes from, how it is tested, and what documentation supports the shipment.</p>
+      <p style="margin-top:1.5rem;">
+        <strong style="color:var(--forest);">Registered Office:</strong> Ethno Organics, Kochi, Kerala, India &nbsp;|&nbsp;
+        <strong style="color:var(--forest);">Ajay Antony:</strong> <a href="tel:+916238384336" style="color:var(--forest-mid);text-decoration:none;">+91 62383 84336</a> &nbsp;|&nbsp;
+        <strong style="color:var(--forest);">Vishnu Narayanan:</strong> <a href="tel:+918129611412" style="color:var(--forest-mid);text-decoration:none;">+91 81296 11412</a> &nbsp;|&nbsp;
+        <strong style="color:var(--forest);">Delphy Rocha:</strong> <a href="tel:+919496819118" style="color:var(--forest-mid);text-decoration:none;">+91 94968 19118</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ LAUNCH STATEMENT ══════════════ -->
+<div class="launch-statement">
+  <div class="launch-inner">
+    <h2>Fresh Start. <em>Deep Roots.</em><br>Kerala's Forests, Brought to You Honestly.</h2>
+    <p>We know the world is full of spice and essential oil exporters claiming the best quality. We are not here to make the loudest claims — we are here to let our documentation, laboratory certificates, and verified supply chain do the talking. As a newly established company, we invite buyers who value transparency, scientific credibility, and a genuine long-term supply relationship.</p>
+    <div class="launch-credentials">
+      <span class="cred-chip">Forestry Science Degree Holders</span>
+      <span class="cred-chip">KFDC Sourced Products</span>
+      <span class="cred-chip">IWST Bangalore Lab Testing</span>
+      <span class="cred-chip">Full Legal Documentation</span>
+      <span class="cred-chip">Global Export Ready</span>
+      <span class="cred-chip">Consistent Supply Commitment</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ PRODUCTS ══════════════ -->
+<section id="products" class="products">
+  <div class="products-header fade-in visible">
+    <div>
+      <span class="section-label">Our Product Range</span>
+      <h2 class="section-title">Certified Organic Forest Products</h2>
+      <p class="section-sub">All products are sourced from Kerala's Western Ghats ecosystem — wild-harvested, organically grown, or KFDC-issued — with full laboratory certification and export documentation.</p>
+    </div>
+    <a href="#contact" class="btn-primary" style="background: var(--forest); color: var(--gold-light);">Request Product Catalogue</a>
+  </div>
+  <div class="products-grid fade-in visible">
+    <div class="product-card featured">
+      <div class="product-visual pv-sandalwood">
+        <div class="product-visual-decor"></div>
+        <span class="product-visual-icon">🌿</span>
+      </div>
+      <div class="product-body" style="padding: 2.3rem;">
+        <span class="product-tag">🌟 Flagship Product</span>
+        <h3 class="product-name">Pure Indian Sandalwood Oil<br>(Santalum album)</h3>
+        <p class="product-desc">Steam-distilled from authenticated KFDC-certified heartwood. Genuine Indian sandalwood oil — among the world's most valuable essential oils — with GC-MS certification confirming α-Santalol and β-Santalol content. Suited for luxury perfumery, high-end cosmetics, Ayurvedic medicine, and pharmaceutical applications. Sourced through KFDC, the only lawful channel for sandalwood in Kerala.</p>
+        <div class="product-specs">
+          <span class="spec-pill">KFDC Issued</span>
+          <span class="spec-pill">Steam Distilled</span>
+          <span class="spec-pill">GC-MS Certified</span>
+          <span class="spec-pill">α-Santalol Tested</span>
+          <span class="spec-pill">ISO 3518</span>
+          <span class="spec-pill">COA Per Lot</span>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-visual pv-pepper">
+        <div class="product-visual-decor"></div>
+        <span class="product-visual-icon">⚫</span>
+      </div>
+      <div class="product-body">
+        <span class="product-tag">King of Spices</span>
+        <h3 class="product-name">Kerala Black Pepper</h3>
+        <p class="product-desc">Organically cultivated Malabar pepper from Western Ghats farms. High piperine content, bold flavour profile. Ideal for food manufacturers, spice brands, and nutraceutical applications.</p>
+        <div class="product-specs">
+          <span class="spec-pill">Organic Certified</span>
+          <span class="spec-pill">High Piperine</span>
+          <span class="spec-pill">Pesticide-Free</span>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-visual pv-cardamom">
+        <div class="product-visual-decor"></div>
+        <span class="product-visual-icon">🫛</span>
+      </div>
+      <div class="product-body">
+        <span class="product-tag">World's Finest</span>
+        <h3 class="product-name">Green Cardamom</h3>
+        <p class="product-desc">Shade-grown under natural forest canopy in Idukki — the world's most aromatic cardamom district. Hand-picked at peak ripeness. Bold 7–8mm grade available for premium markets.</p>
+        <div class="product-specs">
+          <span class="spec-pill">Idukki Origin</span>
+          <span class="spec-pill">Bold Grade</span>
+          <span class="spec-pill">Lab Tested</span>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-visual pv-cinnamon">
+        <div class="product-visual-decor"></div>
+        <span class="product-visual-icon">🪵</span>
+      </div>
+      <div class="product-body">
+        <span class="product-tag">True Cinnamon</span>
+        <h3 class="product-name">Ceylon-Type Cinnamon</h3>
+        <p class="product-desc">Authentic Cinnamomum verum — thin, fragrant quills with naturally low coumarin content. Suitable for pharmaceutical, food-grade, and nutraceutical applications in regulated markets.</p>
+        <div class="product-specs">
+          <span class="spec-pill">C. verum Species</span>
+          <span class="spec-pill">Low Coumarin</span>
+          <span class="spec-pill">Phyto Cert</span>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-visual pv-spice">
+        <div class="product-visual-decor"></div>
+        <span class="product-visual-icon">🟤</span>
+      </div>
+      <div class="product-body">
+        <span class="product-tag">Culinary &amp; Pharma</span>
+        <h3 class="product-name">Nutmeg, Mace &amp; Clove</h3>
+        <p class="product-desc">Sun-dried, naturally processed nutmeg with full mace, and highly aromatic cloves from the certified spice gardens of Wayanad and Thrissur. Rich essential oil content.</p>
+        <div class="product-specs">
+          <span class="spec-pill">Sun Dried</span>
+          <span class="spec-pill">Moisture Tested</span>
+          <span class="spec-pill">Food Grade</span>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-visual pv-wild">
+        <div class="product-visual-decor"></div>
+        <span class="product-visual-icon">🌱</span>
+      </div>
+      <div class="product-body">
+        <span class="product-tag">Rare Forest Products</span>
+        <h3 class="product-name">Wild Forest Botanicals</h3>
+        <p class="product-desc">NTFP-licensed wild products including wild turmeric (Kasthuri Manjal), forest honey, Ayurvedic herbs, dried roots, resins, and minor forest produce. Seasonally harvested under forestry supervision.</p>
+        <div class="product-specs">
+          <span class="spec-pill">NTFP Licensed</span>
+          <span class="spec-pill">Wild Organic</span>
+          <span class="spec-pill">Seasonal</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ SOURCING ══════════════ -->
+<section id="sourcing">
+  <div class="sourcing-grid">
+    <div class="fade-in visible">
+      <span class="section-label">Transparent Supply Chain</span>
+      <h2 class="section-title">From Forest Record to Your Doorstep</h2>
+      <p class="section-sub">We operate a fully traceable, legally compliant supply chain — built from the forest outward, not from the market backward. Every step is documented.</p>
+      <div class="sourcing-steps" style="margin-top: 2.5rem;">
+        <div class="sourcing-step">
+          <div class="step-circle">1</div>
+          <div class="step-body">
+            <strong>Legal Source Procurement</strong>
+            <p>All products are procured through the Kerala Forest Development Corporation (KFDC), licensed forest produce depots, and NTFP-licensed tribal cooperatives — ensuring complete legality under the Indian Forest Act and relevant state regulations.</p>
+          </div>
+        </div>
+        <div class="sourcing-step">
+          <div class="step-circle">2</div>
+          <div class="step-body">
+            <strong>Scientific Field Evaluation</strong>
+            <p>Our forestry-qualified team personally evaluates each lot at the source — assessing species authenticity, moisture levels, contamination, and visual grade parameters using scientific methodology, not guesswork.</p>
+          </div>
+        </div>
+        <div class="sourcing-step">
+          <div class="step-circle">3</div>
+          <div class="step-body">
+            <strong>Recognised Laboratory Testing</strong>
+            <p>Every accepted batch is submitted to recognised laboratories including IWST Bangalore for independent testing covering pesticide residues, heavy metals, microbial count, essential oil content, moisture, and buyer-specified export parameters.</p>
+          </div>
+        </div>
+        <div class="sourcing-step">
+          <div class="step-circle">4</div>
+          <div class="step-body">
+            <strong>Professional Packaging &amp; Documentation</strong>
+            <p>Food-safe, export-standard packaging with lot-coded traceability. Full documentation pack prepared including COA, phytosanitary certificate, certificate of origin, and any market-specific compliance documents.</p>
+          </div>
+        </div>
+        <div class="sourcing-step">
+          <div class="step-circle">5</div>
+          <div class="step-body">
+            <strong>Committed Consistent Dispatch</strong>
+            <p>Pre-agreed supply schedules are honoured. We manage seasonal planning, harvest coordination, and buffer procurement to ensure reliable, uninterrupted supply for our buyer partners — regardless of season.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sourcing-panel fade-in visible">
+      <div class="source-title">Our Authenticated Sources</div>
+      <p class="source-desc">We are transparent about where every product comes from. These are our primary authorised supply channels — all operating within the full framework of Indian forest and trade law.</p>
+      <div class="source-cards">
+        <div class="source-card">
+          <div class="source-card-icon">🏛️</div>
+          <div class="source-card-text">
+            <strong>Kerala Forest Development Corporation (KFDC)</strong>
+            <span>The state government's authorised body for Kerala forest produce — our primary and most trusted source. KFDC documentation supports legal source verification and sustainable harvesting compliance. Essential for sandalwood oil and regulated forest produce.</span>
+          </div>
+        </div>
+        <div class="source-card">
+          <div class="source-card-icon">🌿</div>
+          <div class="source-card-text">
+            <strong>NTFP-Licensed Tribal Cooperatives</strong>
+            <span>Partnerships with Scheduled Tribe communities holding government-issued Non-Timber Forest Produce collection licences. Ensures direct community benefit, authentic wild-organic character, and social compliance for ethical market buyers.</span>
+          </div>
+        </div>
+        <div class="source-card">
+          <div class="source-card-icon">🌾</div>
+          <div class="source-card-text">
+            <strong>NPOP-Certified Organic Farmers</strong>
+            <span>Network of Wayanad, Idukki, and Thrissur farmers holding National Programme for Organic Production (NPOP) or equivalent certification. Verified organic management systems for spice products.</span>
+          </div>
+        </div>
+        <div class="source-card">
+          <div class="source-card-icon">🏢</div>
+          <div class="source-card-text">
+            <strong>Registered Forest Produce Merchants</strong>
+            <span>Procurement via government-licensed forest produce merchants and registered depots holding complete transit permits, produce documentation, and legal authorisations under the Indian Forest Act.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ CERTIFICATION ══════════════ -->
+<section id="certification" class="cert-section">
+  <div class="cert-header fade-in visible">
+    <span class="section-label">Quality Assurance</span>
+    <h2 class="section-title">Every Shipment. Fully Documented.</h2>
+    <p class="section-sub" style="margin: 0 auto; text-align: center;">We understand that for a newly launched company, documentation is everything. We have built our operations around complete, verifiable paperwork — so you can trust what you receive before it even arrives.</p>
+  </div>
+  <div class="cert-grid fade-in visible">
+    <div class="cert-card">
+      <div class="cert-card-icon">🔬</div>
+      <strong>Laboratory Testing</strong>
+      <p>Product testing conducted through recognised laboratories, including testing support from IWST Bangalore where applicable, covering physicochemical and microbiological parameters.</p>
+    </div>
+    <div class="cert-card">
+      <div class="cert-card-icon">📋</div>
+      <strong>Certificate of Analysis (COA)</strong>
+      <p>Detailed COA for every consignment — purity, moisture, essential oil content, pesticide residue screening, heavy metals, and microbial count.</p>
+    </div>
+    <div class="cert-card">
+      <div class="cert-card-icon">🌿</div>
+      <strong>Organic Certification</strong>
+      <p>NPOP (India Organic) certification available for eligible products. NOP-equivalent documentation available on request for US market buyers.</p>
+    </div>
+    <div class="cert-card">
+      <div class="cert-card-icon">🛃</div>
+      <strong>Phytosanitary Certificate</strong>
+      <p>Government-issued phytosanitary certificate from Plant Protection Authority for all export consignments — mandatory for most international markets.</p>
+    </div>
+    <div class="cert-card">
+      <div class="cert-card-icon">📍</div>
+      <strong>Certificate of Origin</strong>
+      <p>Chamber of Commerce issued Certificate of Origin confirming Kerala / India origin — supporting GSP preferential tariff benefits for eligible buyers.</p>
+    </div>
+    <div class="cert-card">
+      <div class="cert-card-icon">🏛️</div>
+      <strong>KFDC Source Certificate</strong>
+      <p>For sandalwood oil and controlled forest produce — KFDC-issued documentation confirming legal procurement from Kerala's authorised state forest authority.</p>
+    </div>
+    <div class="cert-card">
+      <div class="cert-card-icon">🔐</div>
+      <strong>FSSAI Compliance</strong>
+      <p>All food-category products comply with Food Safety and Standards Authority of India (FSSAI) requirements, with corresponding licence and compliance records.</p>
+    </div>
+    <div class="cert-card">
+      <div class="cert-card-icon">📦</div>
+      <strong>Full Lot Traceability</strong>
+      <p>Every shipment carries a unique lot code traceable to harvest source, date, forest area, and lab test reference — providing complete supply chain transparency.</p>
+    </div>
+  </div>
+  <div class="lab-banner fade-in visible">
+    <div class="lab-banner-text">
+      <strong>Sandalwood Oil — GC-MS Analysis on Every Batch</strong>
+      <p>Genuine Indian sandalwood oil (Santalum album) is among the world's most adulterated essential oils. We subject every batch to Gas Chromatography–Mass Spectrometry (GC-MS) analysis through recognised laboratories including IWST Bangalore, confirming α-Santalol (minimum 41%), β-Santalol, and full terpene profile in line with ISO 3518 — before any shipment is confirmed. Buyers receive the full GC-MS report alongside their order.</p>
+    </div>
+    <a href="#contact" class="btn-primary">Request a Sample COA</a>
+  </div>
+</section>
+
+<!-- ══════════════ WHY US ══════════════ -->
+<section id="why">
+  <div class="fade-in visible" style="text-align: center; margin-bottom: 0.5rem;">
+    <span class="section-label">Our Genuine Strengths</span>
+    <h2 class="section-title" style="max-width: 540px; margin: 0 auto 1rem;">What Makes Ethno Organics Different</h2>
+    <p class="section-sub" style="margin: 0 auto; text-align: center; max-width: 680px;">We are not the biggest. We are not the oldest. But we are committed to being the most honest, scientifically credible, and documentation-complete export partner you will find in Kerala.</p>
+  </div>
+  <div class="why-grid fade-in visible">
+    <div class="why-card">
+      <span class="why-card-icon">🎓</span>
+      <strong>Genuine Forestry Science Expertise</strong>
+      <p>Our team's forestry qualifications mean we understand our products at a biological and ecological level — identifying authentic species, assessing sustainable yield, and evaluating quality at source, not just at the warehouse.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-card-icon">🏛️</span>
+      <strong>KFDC as Primary Source</strong>
+      <p>Our sandalwood and regulated products come directly through Kerala Forest Development Corporation — the only fully lawful channel. This is non-negotiable for us, regardless of cost or convenience.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-card-icon">📄</span>
+      <strong>Documentation-First Culture</strong>
+      <p>As a new company, we know documents are our reputation. We prepare every certification — lab reports, origin certificates, phytosanitary documents, and organic certificates — proactively, not on request.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-card-icon">🌍</span>
+      <strong>Global Market Readiness</strong>
+      <p>We support export enquiries from buyers worldwide, subject to destination-country import regulations. Our documentation and quality standards are calibrated for the most demanding markets — EU, USA, Japan, Australia, and the Middle East.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-card-icon">🔄</span>
+      <strong>Consistent Supply Commitment</strong>
+      <p>Consistency is built into how we source — through pre-planned harvest calendars, legal procurement scheduling with KFDC, and buffer stock management. We commit to timelines we can genuinely keep.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-card-icon">🤝</span>
+      <strong>Transparent New-Company Honesty</strong>
+      <p>We don't hide behind inflated claims. We are a new company with deep subject expertise — and we invite buyers to verify everything, starting with samples and documentation before committing to any order.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ GLOBAL REACH ══════════════ -->
+<section id="global" class="global-section">
+  <div class="fade-in visible" style="text-align: center; margin-bottom: 0.5rem;">
+    <span class="section-label">Export Markets</span>
+    <h2 class="section-title">Supplying Buyers Worldwide</h2>
+    <p class="section-sub" style="margin: 0 auto; text-align: center; color: rgba(255,255,255,0.6); max-width: 620px;">We are set up to export to buyers worldwide — with product documentation, labelling, and quality standards tailored to each market's regulatory requirements, subject to destination-country import regulations.</p>
+  </div>
+  <div class="regions-grid fade-in visible">
+    <div class="region-card">
+      <span class="region-icon">🇪🇺</span>
+      <strong>European Union</strong>
+      <p>EU organic regulations, maximum residue limits, and EC phytosanitary compliance — fully addressed in our documentation.</p>
+    </div>
+    <div class="region-card">
+      <span class="region-icon">🇺🇸</span>
+      <strong>United States</strong>
+      <p>FDA import compliance, USDA NOP organic equivalence, and FDA Prior Notice requirements for food and botanical products.</p>
+    </div>
+    <div class="region-card">
+      <span class="region-icon">🌙</span>
+      <strong>Middle East &amp; GCC</strong>
+      <p>Halal-compatible supply chain, SFDA (Saudi) and MOIAT (UAE) aligned documentation for spices and essential oils.</p>
+    </div>
+    <div class="region-card">
+      <span class="region-icon">🇯🇵</span>
+      <strong>Japan &amp; East Asia</strong>
+      <p>Strict pesticide residue standards, JAS organic requirements, and precise specification compliance for Japanese and Korean markets.</p>
+    </div>
+    <div class="region-card">
+      <span class="region-icon">🇬🇧</span>
+      <strong>United Kingdom</strong>
+      <p>Post-Brexit UK organic certification pathways and APHA phytosanitary requirements for GB market entry.</p>
+    </div>
+    <div class="region-card">
+      <span class="region-icon">🦘</span>
+      <strong>Australia &amp; New Zealand</strong>
+      <p>AQIS biosecurity compliance, DAFF import conditions, and ACO organic certification alignment for Oceania markets.</p>
+    </div>
+    <div class="region-card">
+      <span class="region-icon">🌏</span>
+      <strong>Southeast Asia</strong>
+      <p>ASEAN trade documentation, bilateral trade agreements under CECA, and country-specific import condition compliance.</p>
+    </div>
+    <div class="region-card">
+      <span class="region-icon">🌐</span>
+      <strong>All Other Countries</strong>
+      <p>We adapt our documentation package for any destination market on request. Reach us with your country requirements.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ BUYERS ══════════════ -->
+<section id="buyers" class="buyer-section">
+  <div class="buyer-grid">
+    <div class="fade-in visible">
+      <span class="section-label">For Importers &amp; Buyers</span>
+      <h2 class="section-title">We're Inviting Genuine Long-Term Partners</h2>
+      <p class="section-sub">Ethno Organics welcomes enquiries from importers, distributors, spice processors, essential oil companies, cosmetic manufacturers, Ayurvedic brands, food manufacturers, and gourmet spice retailers worldwide.</p>
+      <div style="margin-top: 2rem; display: flex; flex-direction: column; gap: 1rem;">
+        <div style="padding: 1.2rem 1.5rem; background: var(--forest); border-radius: 4px; color: white;">
+          <strong style="font-size: 1rem; font-family: 'Playfair Display', serif; color: var(--gold-light); display: block; margin-bottom: 0.45rem;">Start with a Trial Order</strong>
+          <p style="font-size: 0.84rem; color: rgba(255,255,255,0.68); line-height: 1.62;">We actively encourage new buyers to begin with a trial order — small quantities with full laboratory documentation. This builds your confidence in our quality before committing to larger volumes. Sandalwood oil: from 500 g trial. Spices: from 25 kg per variety.</p>
+        </div>
+        <div style="padding: 1.2rem 1.5rem; background: var(--forest); border-radius: 4px; color: white;">
+          <strong style="font-size: 1rem; font-family: 'Playfair Display', serif; color: var(--gold-light); display: block; margin-bottom: 0.45rem;">Accepted Payment Terms</strong>
+          <p style="font-size: 0.84rem; color: rgba(255,255,255,0.68); line-height: 1.62;">50% advance + 50% against Bill of Lading copy for initial orders. Letter of Credit (L/C at sight) accepted. We are flexible and open to discussing terms that give both sides confidence and security.</p>
+        </div>
+      </div>
+    </div>
+    <div class="buyer-benefits fade-in visible">
+      <div class="buyer-benefit">
+        <span class="buyer-benefit-icon">✅</span>
+        <div>
+          <strong>Complimentary Sample with Lab Report</strong>
+          <p>Serious buyers receive a product sample with the corresponding laboratory test report — before you place any order. Evaluate our quality with evidence, not promises.</p>
+        </div>
+      </div>
+      <div class="buyer-benefit">
+        <span class="buyer-benefit-icon">🚢</span>
+        <div>
+          <strong>Flexible Incoterms: FOB / CIF / EXW</strong>
+          <p>We accommodate your preferred shipping terms. Our freight forwarding partners manage all export customs, loading, and documentation from Kerala to any port worldwide.</p>
+        </div>
+      </div>
+      <div class="buyer-benefit">
+        <span class="buyer-benefit-icon">🔒</span>
+        <div>
+          <strong>Annual Supply Agreements Available</strong>
+          <p>Once a trial order confirms your satisfaction, we offer annual supply agreements with fixed pricing windows, committed volumes, and priority dispatch scheduling.</p>
+        </div>
+      </div>
+      <div class="buyer-benefit">
+        <span class="buyer-benefit-icon">📋</span>
+        <div>
+          <strong>Custom Documentation Package</strong>
+          <p>We prepare market-specific documentation — EU organic certificates, US FDA Prior Notice, MSDS sheets, Halal declarations, and more — tailored to your import requirements.</p>
+        </div>
+      </div>
+      <div class="buyer-benefit">
+        <span class="buyer-benefit-icon">🏷️</span>
+        <div>
+          <strong>Private Label Packaging</strong>
+          <p>We offer private-label export packaging for established buyers wanting their own branded product line. Custom packaging design and specification available on request.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ CONTACT ══════════════ -->
+<section id="contact" class="contact-section">
+  <div class="contact-grid">
+    <div class="contact-info fade-in visible">
+      <span class="section-label" style="color: rgba(200,151,58,0.65);">Get in Touch</span>
+      <h2 class="section-title" style="color: var(--gold-light);">Let's Begin a Genuine Partnership</h2>
+      <p class="section-sub" style="color: rgba(255,255,255,0.62); font-size: 0.93rem; line-height: 1.75;">We are a new company and we welcome every genuine enquiry with equal care. Whether you need a single sample or want to discuss a long-term supply contract, we respond to all serious buyer enquiries within 24 hours. Let's talk honestly.</p>
+
+      <div class="contact-detail">
+        <div class="contact-detail-icon">📍</div>
+        <div>
+          <strong>Registered Office</strong>
+          <p>Ethno Organics<br>Kochi, Kerala, India</p>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">📧</div>
+        <div>
+          <strong>Email</strong>
+          <p>
+            <a href="mailto:exports@ethnoorganics.in">exports@ethnoorganics.in</a><br>
+            <a href="mailto:info@ethnoorganics.in">info@ethnoorganics.in</a>
+          </p>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">📱</div>
+        <div>
+          <strong>Phone / WhatsApp</strong>
+          <p>
+            Ajay Antony: <a href="tel:+916238384336">+91 62383 84336</a><br>
+            Vishnu Narayanan: <a href="tel:+918129611412">+91 81296 11412</a><br>
+            Delphy Rocha: <a href="tel:+919496819118">+91 94968 19118</a><br>
+            <span style="font-size:0.78rem;opacity:0.6;">Monday – Saturday · 9 AM – 6 PM IST</span>
+          </p>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">🌍</div>
+        <div>
+          <strong>We Export To</strong>
+          <p>Buyers worldwide · Subject to destination-country import regulations</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form fade-in visible">
+      <h3 class="form-title">Buyer Enquiry Form</h3>
+      <p class="form-sub">Share your requirements and we'll respond with product specifications, lab report samples, and pricing within 24 hours. No obligation — just a genuine conversation.</p>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" placeholder="Full name">
+        </div>
+        <div class="form-group">
+          <label>Company Name</label>
+          <input type="text" placeholder="Your organisation">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="you@company.com">
+        </div>
+        <div class="form-group">
+          <label>Phone / WhatsApp</label>
+          <input type="tel" placeholder="+1 234 567 8900">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Country</label>
+          <input type="text" placeholder="Destination country">
+        </div>
+        <div class="form-group">
+          <label>Estimated Quantity / Frequency</label>
+          <input type="text" placeholder="e.g. 50 kg/month">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Product of Interest</label>
+        <select>
+          <option value="">Select a product...</option>
+          <option>Sandalwood Oil — Pure (Santalum album)</option>
+          <option>Kerala Black Pepper (Organic)</option>
+          <option>Green Cardamom (Bold Grade)</option>
+          <option>True Cinnamon (Cinnamomum verum)</option>
+          <option>Nutmeg &amp; Mace</option>
+          <option>Clove</option>
+          <option>Wild Turmeric (Kasthuri Manjal)</option>
+          <option>Wild Forest Botanicals / NTFP Products</option>
+          <option>Multiple Products — Please Specify Below</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Enquiry Type</label>
+        <select>
+          <option>Request Sample + Lab Report</option>
+          <option>Trial Order Enquiry</option>
+          <option>Annual Supply Contract</option>
+          <option>Product Specification Request</option>
+          <option>Certification / Documentation Query</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Message / Specific Requirements</label>
+        <textarea placeholder="Please describe your requirements — specific quality parameters, certifications your market requires, intended application, or any other details that help us respond accurately..."></textarea>
+      </div>
+      <button class="btn-primary" style="width: 100%; padding: 1rem;" onclick="alert('Thank you for your enquiry. The Ethno Organics team will respond within 24 hours.')">Submit Enquiry →</button>
+      <p style="font-size: 0.7rem; color: rgba(255,255,255,0.3); text-align: center; margin-top: 1rem; line-height: 1.5;">Your enquiry is confidential. We respond personally — never with automated bulk replies.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer>
+  <div class="footer-logo">
+    Ethno Organics
+    <span>Kerala Organic Forest Products · Export Partnership · Est. 2025</span>
+  </div>
+  <div class="footer-mid">
+    <strong>Registered Partnership Firm · Kochi, Kerala, India</strong>
+    Forestry Science Qualified · KFDC Authorised Channel · FSSAI Licensed<br>
+    IEC (Import Export Code) Registered · Testing through recognised laboratories including IWST Bangalore<br>
+    <span style="color: rgba(255,255,255,0.22); font-size: 0.68rem;">© 2025 Ethno Organics. All rights reserved.</span>
+  </div>
+  <div class="footer-certs">
+    <span class="footer-cert-pill">KFDC Partner</span>
+    <span class="footer-cert-pill">IWST Lab Tested</span>
+    <span class="footer-cert-pill">Organic</span>
+    <span class="footer-cert-pill">Global Export</span>
+    <span class="footer-cert-pill">Science-Led</span>
+  </div>
+</footer>
+
+<script>
+  // Scroll animations
+  const faders = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.06, rootMargin: '0px 0px -40px 0px' });
+  faders.forEach(el => observer.observe(el));
+
+  // Smooth scroll for all anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
+      // close mobile menu if open
+      document.getElementById('navLinks').classList.remove('open');
+    });
+  });
+
+  // Close mobile nav on outside click
+  document.addEventListener('click', e => {
+    if (!e.target.closest('nav')) {
+      document.getElementById('navLinks').classList.remove('open');
+    }
+  });
+</script>
+
+</body>
+</html>
