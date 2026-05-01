@@ -1181,124 +1181,105 @@
 </section>
 
 <!-- ══════════════ CONTACT ══════════════ -->
-<section id="contact" class="contact-section">
-  <div class="contact-grid">
-    <div class="contact-info fade-in visible">
-      <span class="section-label" style="color: rgba(200,151,58,0.65);">Get in Touch</span>
-      <h2 class="section-title" style="color: var(--gold-light);">Let's Begin a Genuine Partnership</h2>
-      <p class="section-sub" style="color: rgba(255,255,255,0.62); font-size: 0.93rem; line-height: 1.75;">We are a new company and we welcome every genuine enquiry with equal care. Whether you need a single sample or want to discuss a long-term supply contract, we respond to all serious buyer enquiries within 24 hours. Let's talk honestly.</p>
+<div class="contact-form fade-in visible">
 
-      <div class="contact-detail">
-        <div class="contact-detail-icon">📍</div>
-        <div>
-          <strong>Registered Office</strong>
-          <p>Ethno Organics<br>Kochi, Kerala, India</p>
-        </div>
+  <form action="https://formspree.io/f/mdaboqpp" method="POST">
+
+    <h3 class="form-title">Buyer Enquiry Form</h3>
+
+    <p class="form-sub">
+      Share your requirements and we'll respond with product specifications, lab reports, and pricing within 24 hours.
+    </p>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" name="name" placeholder="Full name" required>
       </div>
-      <div class="contact-detail">
-        <div class="contact-detail-icon">📧</div>
-        <div>
-          <strong>Email</strong>
-          <p>
-            <a href="mailto:exports@ethnoorganics.in">info@ethnoorganics.in</a><br>
-            <a href="mailto:info@ethnoorganics.in">exports@ethnoorganics.in</a>
-          </p>
-        </div>
-      </div>
-      <div class="contact-detail">
-        <div class="contact-detail-icon">📱</div>
-        <div>
-          <strong>Phone / WhatsApp</strong>
-          <p>
-            Ajay Antony: <a href="tel:+916238384336">+91 62383 84336</a><br>
-            Vishnu Narayanan: <a href="tel:+918129611412">+91 81296 11412</a><br>
-            Viju Varghese: <a href="tel:+919496819118">+91 94968 19118</a><br>
-            <span style="font-size:0.78rem;opacity:0.6;">Monday – Saturday · 9 AM – 6 PM IST</span>
-          </p>
-        </div>
-      </div>
-      <div class="contact-detail">
-        <div class="contact-detail-icon">🌍</div>
-        <div>
-          <strong>We Export To</strong>
-          <p>Buyers worldwide · Subject to destination-country import regulations</p>
-        </div>
+
+      <div class="form-group">
+        <label>Company Name</label>
+        <input type="text" name="company" placeholder="Your organisation">
       </div>
     </div>
 
-    <div class="contact-form fade-in visible">
-      <h3 class="form-title">Buyer Enquiry Form</h3>
-      <p class="form-sub">Share your requirements and we'll respond with product specifications, lab report samples, and pricing within 24 hours. No obligation — just a genuine conversation.</p>
-      <div class="form-row">
-        <div class="form-group">
-          <label>Your Name</label>
-          <input type="text" placeholder="Full name">
-        </div>
-        <div class="form-group">
-          <label>Company Name</label>
-          <input type="text" placeholder="Your organisation">
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group">
-          <label>Email Address</label>
-          <input type="email" placeholder="you@company.com">
-        </div>
-        <div class="form-group">
-          <label>Phone / WhatsApp</label>
-          <input type="tel" placeholder="+1 234 567 8900">
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group">
-          <label>Country</label>
-          <input type="text" placeholder="Destination country">
-        </div>
-        <div class="form-group">
-          <label>Estimated Quantity / Frequency</label>
-          <input type="text" placeholder="e.g. 50 kg/month">
-        </div>
-      </div>
+    <div class="form-row">
       <div class="form-group">
-        <label>Product of Interest</label>
-        <select>
-          <option value="">Select a product...</option>
-          <option>Sandalwood Oil — Pure (Santalum album)</option>
-          <option>Kerala Black Pepper (Organic)</option>
-          <option>Green Cardamom (Bold Grade)</option>
-          <option>True Cinnamon (Cinnamomum verum)</option>
-          <option>Nutmeg &amp; Mace</option>
-          <option>Clove</option>
-          <option>Wild Turmeric (Kasthuri Manjal)</option>
-          <option>Wild Forest Botanicals / NTFP Products</option>
-          <option>Multiple Products — Please Specify Below</option>
-        </select>
+        <label>Email Address</label>
+        <input type="email" name="email" placeholder="you@company.com" required>
       </div>
+
       <div class="form-group">
-        <label>Enquiry Type</label>
-        <select>
-          <option>Request Sample + Lab Report</option>
-          <option>Trial Order Enquiry</option>
-          <option>Annual Supply Contract</option>
-          <option>Product Specification Request</option>
-          <option>Certification / Documentation Query</option>
-        </select>
+        <label>Phone / WhatsApp</label>
+        <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX">
       </div>
-      <div class="form-group">
-        <label>Message / Specific Requirements</label>
-        <textarea placeholder="Please describe your requirements — specific quality parameters, certifications your market requires, intended application, or any other details that help us respond accurately..."></textarea>
-      </div>
-      <button class="btn-primary" style="width: 100%; padding: 1rem;" onclick="alert('Thank you for your enquiry. The Ethno Organics team will respond within 24 hours.')">Submit Enquiry →</button>
-      <p style="font-size: 0.7rem; color: rgba(255,255,255,0.3); text-align: center; margin-top: 1rem; line-height: 1.5;">Your enquiry is confidential. We respond personally — never with automated bulk replies.</p>
     </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Country</label>
+        <input type="text" name="country" placeholder="Destination country">
+      </div>
+
+      <div class="form-group">
+        <label>Estimated Quantity / Frequency</label>
+        <input type="text" name="quantity" placeholder="e.g. 50 kg/month">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Product of Interest</label>
+      <select name="product">
+        <option value="">Select a product...</option>
+        <option>Sandalwood Oil — Pure (Santalum album)</option>
+        <option>Kerala Black Pepper (Organic)</option>
+        <option>Green Cardamom (Bold Grade)</option>
+        <option>True Cinnamon (Cinnamomum verum)</option>
+        <option>Nutmeg & Mace</option>
+        <option>Clove</option>
+        <option>Wild Turmeric (Kasthuri Manjal)</option>
+        <option>Wild Forest Botanicals / NTFP Products</option>
+        <option>Multiple Products — Please Specify Below</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Enquiry Type</label>
+      <select name="enquiry_type">
+        <option>Request Sample + Lab Report</option>
+        <option>Trial Order Enquiry</option>
+        <option>Annual Supply Contract</option>
+        <option>Product Specification Request</option>
+        <option>Certification / Documentation Query</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Message / Specific Requirements</label>
+      <textarea name="message" placeholder="Please describe your requirements — quality, certification, destination market, etc." required></textarea>
+    </div>
+
+    <button type="submit" class="btn-primary" style="width: 100%; padding: 1rem;">
+      Submit Enquiry →
+    </button>
+
+    <p style="font-size: 0.7rem; color: rgba(255,255,255,0.3); text-align: center; margin-top: 1rem; line-height: 1.5;">
+      Your enquiry is confidential. We respond personally within 24 hours.
+    </p>
+
+  </form>
+
+</div>
+    
   </div>
+  
 </section>
 
 <!-- ══════════════ FOOTER ══════════════ -->
 <footer>
   <div class="footer-logo">
     Ethno Organics
-    <span>Kerala Organic Forest Products · Export Partnership · Est. 2025</span>
+    <span>Kerala Organic Forest Products · Export Partnership · Est. 2026</span>
   </div>
   <div class="footer-mid">
     <strong>Registered Partnership Firm · Kochi, Kerala, India</strong>
@@ -1346,23 +1327,5 @@
     }
   });
 </script>
-
-<form action="https://formspree.io/f/mdaboqpp" method="POST">
-
-  <label>Your Name</label><br>
-  <input type="text" name="name" required><br><br>
-
-  <label>Your Email</label><br>
-  <input type="email" name="email" required><br><br>
-
-  <label>Phone</label><br>
-  <input type="text" name="phone"><br><br>
-
-  <label>Message</label><br>
-  <textarea name="message" required></textarea><br><br>
-
-  <button type="submit">Send Enquiry</button>
-
-</form>
   </body>
   </html>
